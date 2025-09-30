@@ -1,5 +1,5 @@
 /**
- * @name RIKKA7v5
+ * @name RIKKA7v6
  * @rikka-author Leons
  * @author ClearVision Team
  * @version 7.0.0
@@ -455,4 +455,40 @@ div[role="button"][aria-label="Mark Unread"],
   border-radius: 5px;
   bottom: calc(-12px + var(--space-6));
   box-shadow: 0 0 6px 0px var(--main-color)
+}
+/* remove grabber from music player */
+.grabber_a562c8 {
+  visibility: hidden;
+}
+/*Removes Orbs Banner (Under Profiles)*/
+.container__8279f {
+  display: none;
+}
+/*Removes Use Apps */
+div#channel-attach-SLASH_COMMAND {
+  display: none;
+}
+/* VOICE CONNECTIVITY */
+  .ping__06d62 path {
+    fill: #6F50A5;
+  }
+
+  .rtcConnectionStatusConnected__06d62 {
+    color: #6F50A5;
+  }
+
+  .rtcConnectionStatusConnecting__06d62 {
+    color: var(--text-feedback-warning)
+  }
+
+  .rtcConnectionStatusError__06d62 {
+    color: var(--status-danger)
+}
+/*Makes Connected to * background trasnparent*/
+.root_e373d2.connected_e373d2 {
+  background-color: transparent;
+}
+/* Remove Help button from top right */
+.anchor_edefb8 [aria-label="Help"]{
+  display: none !important;
 }
