@@ -1,5 +1,5 @@
 /**
- * @name RIKKA7v6
+ * @name RIKKA7v7
  * @rikka-author Leons
  * @author ClearVision Team
  * @version 7.0.0
@@ -16,7 +16,7 @@
   /* ACCENT COLORS */
   --main-color: #6F50A5;
   --hover-color: #805FBF;
-  --success-color: #6031B7;
+  --success-color: #704db2;
   --danger-color: #982929;
   /* STATUS COLORS */
   --online-color: #43b581;
@@ -42,8 +42,11 @@
   /* FONTS */
   --main-font: "Whitney", Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif;
   --code-font: Consolas, "gg mono", "Liberation Mono", Menlo, Courier, monospace;
-    /* SERVER ACCENT COLOR */
+  /* SERVER ACCENT COLOR */
   --server-accent-color: rgb(111, 80, 165);
+  /* MISC */
+  --status-positive-color: #7356ac;
+  --status-positive: var(--status-positive-color)
 }
 
 /* THEME SPECIFIC SHADING */
@@ -160,59 +163,6 @@
 .itemContainer__675e5, .headerContainer__675e5  {
     display: none;
 }
-/* Static emoji button */
-/*[aria-label="Select emoji"] [class*="contents_"]{
-    -webkit-mask-image: url(https://api.iconify.design/mingcute/emoji-fill.svg);
-    -webkit-mask-size: 26px;
-    -webkit-mask-position: center;
-    background: var(--interactive-normal);
-}
-[aria-label="Select emoji"] [class*="contents_"]:hover{
-    background: var(--interactive-hover);
-}
-[aria-label="Select emoji"] [class*="contents_"] *{
-    visibility: hidden;
-}
-/* Old mute and deafen icons */
-/*:root{
-    --user-area-icon-color: var(--interactive-normal);
-    --user-area-icon-color-hover: var(--interactive-hover);
-}
-[aria-label="User area"] button[aria-label="User Settings"] svg,
-[aria-label="User area"] button[aria-label="Mute"] svg,
-[aria-label="User area"] button[aria-label="Deafen"] svg{
-    display: none;
-}
-[aria-label="User area"] button[aria-label="User Settings"] :has(> svg),
-[aria-label="User area"] button[aria-label="Mute"] :has(> svg),
-[aria-label="User area"] button[aria-label="Deafen"] :has(> svg){
-    -webkit-mask-size: cover;
-    background: var(--user-area-icon-color);
-}
-[aria-label="User area"] button[aria-label="User Settings"]:hover :has(> svg),
-[aria-label="User area"] button[aria-label="Mute"]:hover :has(> svg),
-[aria-label="User area"] button[aria-label="Deafen"]:hover :has(> svg){
-    background: var(--user-area-icon-color-hover);
-}
-[aria-label="User area"] button [style*="--status-danger"]:has(> svg),
-[aria-label="User area"] button:hover [style*="--status-danger"]:has(> svg) {
-    background: var(--status-danger);
-}
-[aria-label="User area"] button[aria-label="Mute"] :has(> svg){
-    -webkit-mask-image: url(https://api.iconify.design/mdi/microphone.svg);
-}
-[aria-label="User area"] button[aria-label="Mute"] [style*="--status-danger"]:has(> svg) {
-    -webkit-mask-image: url(https://api.iconify.design/mdi/microphone-off.svg);
-}
-[aria-label="User area"] button[aria-label="Deafen"] :has(> svg){
-    -webkit-mask-image: url(https://api.iconify.design/mdi/headphones.svg);
-}
-[aria-label="User area"] button[aria-label="Deafen"] [style*="--status-danger"]:has(> svg){
-    -webkit-mask-image: url(https://api.iconify.design/mdi/headphones-off.svg);
-}
-[aria-label="User area"] button[aria-label="User Settings"] :has(> svg){
-    -webkit-mask-image: url(https://api.iconify.design/mdi/cog.svg);
-}
 /* Server unread colour */
 .item_c4cd66 {
     background:rgb(111, 80, 16);
@@ -233,10 +183,14 @@
 .premiumHeader_f78f97 {
     display: none;
 }
-/*gets rid of the gift nitro button on dm profiles*/
+/*Gets rid of the gift nitro button on dm profiles*/
 .giftButtonContainer__68103 {
   display: none;
 }
+.button__74017[aria-label='Send a gift'] {
+  display: none;
+}
+
 /* Hide Mark Unread button */
 div[role="button"][aria-label="Mark Unread"],
 #message-mark-unread
@@ -423,10 +377,6 @@ div[role="button"][aria-label="Mark Unread"],
 	font-weight: 600;
 	color: #FFFFFF;
 }
-/*Status and activity text colour*/
-.text_c9d15c {
-  color: #908d8e
-}
 /* Reaction Tooltip Panel */
   .visual-refresh .reactionTooltip_b49891 {
     border-radius: 9px;
@@ -484,6 +434,7 @@ div#channel-attach-SLASH_COMMAND {
   .rtcConnectionStatusError__06d62 {
     color: var(--status-danger)
 }
+
 /*Makes Connected to * background trasnparent*/
 .root_e373d2.connected_e373d2 {
   background-color: transparent;
@@ -491,4 +442,21 @@ div#channel-attach-SLASH_COMMAND {
 /* Remove Help button from top right */
 .anchor_edefb8 [aria-label="Help"]{
   display: none !important;
+}
+/*Update Ready Icon*/
+.updateIconForeground__49676 {
+  fill: var(--main-color);
+}
+/*Colour change for status icons and coloured status text*/
+.icon_c9d15c path, .activityCounter_c9d15c, .truncated_c9d15c strong  {
+	fill: var(--status-positive-color);
+	color: var(--status-positive);
+}
+/*Dot between status icon and status text*/
+.dot_c9d15c {
+	color: #908d8e
+}
+/*Remove discover button*/
+.scroller_ef3116 > .listItem__650eb {
+    display: none;
 }
