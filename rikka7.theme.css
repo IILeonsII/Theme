@@ -45,8 +45,8 @@
   /* SERVER ACCENT COLOR */
   --server-accent-color: rgb(111, 80, 165);
   /* MISC */
-  --status-positive-color: #7356ac;
-  --status-positive: var(--status-positive-color)
+  --status-positive-color: #7356ac !important;
+  --status-positive: var(--status-positive-color) !important;
 }
 
 /* THEME SPECIFIC SHADING */
@@ -96,6 +96,14 @@
 
 /* ADD ADDITIONAL CSS BELOW HERE */
 
+/*Colour change for status icons and coloured status text*/
+.icon_c9d15c path, .truncated_c9d15c path strong{
+	color: var(--status-positive);
+	fill: var(--status-positive-color);
+}
+#app-mount [class*="text-xs/medium_cf4812 activityCounter_c9d15c"]{
+    color: var(--status-positive-color) !important;
+}
 
 /* Link text */
   --url-color: #6F50A5;
@@ -446,11 +454,6 @@ div#channel-attach-SLASH_COMMAND {
 /*Update Ready Icon*/
 .updateIconForeground__49676 {
   fill: var(--main-color);
-}
-/*Colour change for status icons and coloured status text*/
-.icon_c9d15c path, .activityCounter_c9d15c, .truncated_c9d15c strong  {
-	fill: var(--status-positive-color);
-	color: var(--status-positive);
 }
 /*Dot between status icon and status text*/
 .dot_c9d15c {
