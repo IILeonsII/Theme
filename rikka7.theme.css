@@ -101,8 +101,8 @@
 	color: var(--status-positive);
 	fill: var(--status-positive-color);
 }
-#app-mount [class*="text-xs/medium_cf4812 activityCounter_c9d15c"]{
-    color: var(--status-positive-color) !important;
+.activityCounter_c9d15c {
+    color: var(--hsl-main-color) !important;
 }
 
 /* Link text */
@@ -414,9 +414,7 @@ div[role="button"][aria-label="Mark Unread"],
   bottom: calc(-12px + var(--space-6));
   box-shadow: 0 0 6px 0px var(--main-color)
 }
-/* remove grabber from music player */
-.grabber_a562c8 {
-  visibility: hidden;
+
 }
 /*Removes Orbs Banner (Under Profiles)*/
 .container__8279f {
@@ -463,3 +461,7 @@ div#channel-attach-SLASH_COMMAND {
 .scroller_ef3116 > .listItem__650eb {
     display: none;
 }
+/* FOR USE LATER
+.spriteGreyscale__04eed {
+    background-color: var(--hsl-main-color);
+} */
