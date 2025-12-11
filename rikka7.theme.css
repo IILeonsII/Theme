@@ -1,5 +1,5 @@
 /**
- * @name RIKKA7v7
+ * @name RIKKA7v8
  * @rikka-author Leons
  * @author ClearVision Team
  * @version 7.0.0
@@ -13,6 +13,11 @@
 @import url("https://clearvision.github.io/ClearVision-v7/betterdiscord.css");
 /* SETTINGS */
 :root {
+  /* CHANNEL COLORS */
+  --channel-normal: var(--interactive-text-default); /* channel text color [default: var(--interactive-text-default)] */
+  --channel-muted: var(--interactive-muted); /* muted channel text color [default: var(--interactive-muted)] */
+  --channel-hover: var(--interactive-text-hover); /* hovered channel text color [default: var(--interactive-text-hover)] */
+  --channel-selected: var(--interactive-text-active); /* selected channel text color [default: var(--interactive-text-active)] */
   /* ACCENT COLORS */
   --main-color: #6F50A5;
   --hover-color: #805FBF;
@@ -158,18 +163,6 @@
 .privateChannels__35e86 .name__20a53 {
   color: #FFFFFF !important;
   font-size: 15px;
-}
-/* Edit message timestamp */
-.messageContent_c19a55 .timestamp_c19a55 time:after {
-  content: " (" attr(aria-label) ")";
-  font-size: 0.625rem;
-  font-weight: 400;
-}
-.messageContent_c19a55 .timestamp_c19a55 span {
-  display: none;
-}
-.itemContainer__675e5, .headerContainer__675e5  {
-    display: none;
 }
 /* Server unread colour */
 .item_c4cd66 {
